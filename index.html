@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indra Thapa - Personal Website</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+        background:#f4f6f9;
+        color:#333;
+        line-height:1.6;
+    }
+
+    header{
+        background:#0d6efd;
+        color:white;
+        text-align:center;
+        padding:40px 20px;
+    }
+
+    .profile-img{
+        width:180px;
+        height:180px;
+        border-radius:50%;
+        border:5px solid #fff;
+        object-fit:cover;
+        margin-bottom:15px;
+    }
+
+    .container{
+        max-width:1000px;
+        margin:auto;
+        padding:20px;
+    }
+
+    .card{
+        background:white;
+        padding:25px;
+        margin:20px 0;
+        border-radius:10px;
+        box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    h2{
+        color:#0d6efd;
+        margin-bottom:15px;
+    }
+
+    ul{
+        padding-left:20px;
+    }
+
+    li{
+        margin-bottom:8px;
+    }
+
+    .contact p{
+        margin-bottom:10px;
+    }
+
+    .btn{
+        display:inline-block;
+        padding:10px 20px;
+        background:#0d6efd;
+        color:white;
+        text-decoration:none;
+        border-radius:5px;
+        margin-top:10px;
+    }
+
+    .btn:hover{
+        background:#084298;
+    }
+
+    footer{
+        background:#222;
+        color:white;
+        text-align:center;
+        padding:15px;
+        margin-top:20px;
+    }
+
+    #dateTime{
+        font-weight:bold;
+        color:#0d6efd;
+    }
+
+    @media(max-width:768px){
+        .profile-img{
+            width:140px;
+            height:140px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <img src="image.jpg" alt="Indra Thapa" class="profile-img">
+    <h1>Indra Thapa</h1>
+    <p>Co-Ordinator & Instructor</p>
+    <p>Kirtipur Valley Institute Pvt. Ltd.</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>About Me</h2>
+        <p>
+            Hello! My name is <strong>Indra Thapa</strong>. I am a Computer Instructor
+            and Co-Ordinator based in Kathmandu. I have extensive training and experience
+            in computer education, graphic design, web design, accounting, hardware,
+            networking, and chip-level repair.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Address</h2>
+        <p>Kathmandu, Nepal</p>
+    </div>
+
+    <div class="card">
+        <h2>Training & Qualifications</h2>
+        <ul>
+            <li>Diploma in Computer Science</li>
+            <li>Diploma in Graphic Design</li>
+            <li>Diploma in Web Design</li>
+            <li>Accounting</li>
+            <li>Hardware & Networking</li>
+            <li>Chip Level Hardware</li>
+            <li>Chip Level Laptop Repair</li>
+            <li>Chip Level Mobile Repair</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Current Position</h2>
+        <p><strong>Co-Ordinator & Instructor</strong></p>
+        <p>Kirtipur Valley Institute Pvt. Ltd.</p>
+    </div>
+
+    <div class="card contact">
+        <h2>Contact Information</h2>
+        <p><strong>Email:</strong> orchidint@gmail.com</p>
+
+        <a href="mailto:orchidint@gmail.com" class="btn">
+            Send Email
+        </a>
+    </div>
+
+    <div class="card">
+        <h2>Current Date & Time</h2>
+        <p id="dateTime"></p>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; <span id="year"></span> Indra Thapa. All Rights Reserved.</p>
+</footer>
+
+<script>
+function updateDateTime() {
+    const now = new Date();
+    document.getElementById("dateTime").innerHTML =
+        now.toLocaleString();
+}
+
+updateDateTime();
+setInterval(updateDateTime, 1000);
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
